@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>home</title>
+  </head>
+  <body>
+    <form method="POST" action="">
+      {% csrf_token %}
+      {{ form.as_p }}
+    <input type="submit" value="Join" class="btn" />
+  </form>
+  {% for obj in queryset %}
+  {{obj.email}}
+  {{obj.timestamp}}
+
+  {% endfor %}
+  </body>
+</html>
